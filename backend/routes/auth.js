@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
-const User = require("../modules/User.js")
+const User = require("../modules/user.js")
 const generateTokens = (user) => {
     const accessToken = jwt.sign(
         { id: user._id, email: user.email },
